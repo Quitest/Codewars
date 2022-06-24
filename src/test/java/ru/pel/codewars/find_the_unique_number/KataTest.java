@@ -2,6 +2,9 @@ package ru.pel.codewars.find_the_unique_number;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Random;
+import java.util.stream.DoubleStream;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 // TODO: Replace examples and use TDD development by writing your own tests
