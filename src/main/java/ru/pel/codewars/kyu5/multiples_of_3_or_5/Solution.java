@@ -1,4 +1,4 @@
-package ru.pel.codewars.multiples_of_3_or_5;
+package ru.pel.codewars.kyu5.multiples_of_3_or_5;
 
 import java.util.stream.IntStream;
 

@@ -1,4 +1,4 @@
-package ru.pel.codewars.find_the_missing_letter;
+package ru.pel.codewars.kyu5.find_the_missing_letter;
 
 public class Kata {
     /**

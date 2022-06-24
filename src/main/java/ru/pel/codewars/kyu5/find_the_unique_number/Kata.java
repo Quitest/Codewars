@@ -1,4 +1,4 @@
-package ru.pel.codewars.find_the_unique_number;
+package ru.pel.codewars.kyu5.find_the_unique_number;
 
 import java.util.Arrays;
 import java.util.Map;

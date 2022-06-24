@@ -1,4 +1,4 @@
-package ru.pel.codewars.take_a_ten_minutes_walk;
+package ru.pel.codewars.kyu5.take_a_ten_minutes_walk;
 
 public class TenMinWalk {
     public static boolean isValid(char[] walk) {
