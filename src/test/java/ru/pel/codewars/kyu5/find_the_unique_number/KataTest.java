@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-// TODO: Replace examples and use TDD development by writing your own tests
-
 public class KataTest {
     private double precision = 0.0000000000001;
 
