@@ -10,7 +10,7 @@ public class FindOdd {
 
     public static int findIt(int[] a) {
         //Не уверен, что такая проверка даст существенный выигрыш. Хорошо бы замерить.
-        if (a.length==1){
+        if (a.length == 1) {
             return a[0];
         }
 
@@ -20,5 +20,13 @@ public class FindOdd {
                 .parallelStream()
                 .filter(entry -> (entry.getValue() % 2) != 0)
                 .findFirst().orElseThrow().getKey();
+    }
+
+    public static int findItXOR(int[] a) {
+        int xor = 0;
+        for (int j : a) {
+            xor ^= j;
+        }
+        return xor;
     }
 }
