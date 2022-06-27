@@ -6,7 +6,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class KataTest {
     @Test
-    public void basicTests() {
+    void test2(){
+        //was       1234567980
+//        expected  1234567908
+        assertEquals(1234567908, Kata.nextBiggerNumber(1234567908));
+    }
+
+    @Test
+    void basicTests() {
         assertEquals(21, Kata.nextBiggerNumber(12));
         assertEquals(531, Kata.nextBiggerNumber(513));
         assertEquals(2071, Kata.nextBiggerNumber(2017));
@@ -17,6 +24,6 @@ class KataTest {
 
     @Test
     void getDigitArray(){
-        assertEquals(19009, Kata.nextBiggerNumber(10990));
+        assertEquals(-1, Kata.nextBiggerNumber(10));
     }
 }
