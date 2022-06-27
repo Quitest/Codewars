@@ -25,3 +25,6 @@ nextBigger(num: 9)   // returns nil
 nextBigger(num: 111) // returns nil
 nextBigger(num: 531) // returns nil
 ```
+
+###### source:
+https://www.codewars.com/kata/55983863da40caa2c900004e/train/java
