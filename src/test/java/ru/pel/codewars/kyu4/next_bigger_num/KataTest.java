@@ -14,4 +14,9 @@ class KataTest {
         assertEquals(414, Kata.nextBiggerNumber(144));
         assertEquals(19009, Kata.nextBiggerNumber(10990));
     }
+
+    @Test
+    void getDigitArray(){
+        assertEquals(19009, Kata.nextBiggerNumber(10990));
+    }
 }
