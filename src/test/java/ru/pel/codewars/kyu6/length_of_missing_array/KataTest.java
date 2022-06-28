@@ -38,16 +38,7 @@ class KataTest {
                 new Object[]{0, 3, 3}}));
     }
 
-    @Test
-    @DisplayName("Массивы 4, 2, 5. Ожидается 3")
-    void secondExtendedTest() {
-        assertEquals(3, Kata.getLengthOfMissingArray(new Object[][]{
-                new Object[]{4, 5, 1, 1},
-                new Object[]{1, 2},
-                new Object[]{5, 6, 7, 8, 9}}));
-    }
-
-    @Test
+     @Test
     @DisplayName("Массив содержит массив нулевой длинны. Ожидается 0")
     void thirdExtendedTest() {
         assertEquals(0, Kata.getLengthOfMissingArray(new Object[][]{
