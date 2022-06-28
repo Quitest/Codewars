@@ -37,4 +37,9 @@ public class PrimeTest {
         assertFalse(Prime.isPrime(-8),"-8 is not prime" );
         assertFalse(Prime.isPrime(-41),"-41 is not prime" );
     }
+
+    @Test
+    void test(){
+        Prime.isPrime(5099);
+    }
 }
