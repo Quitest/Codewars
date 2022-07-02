@@ -30,28 +30,36 @@ public class Kata {
     }
 
     /**
+     * <p>Метод ищет пропущенную букву в переданном массиве. Массив может быть несортированным.</p>
      * <p>Поиск пропущенной буквы через сумму членов арифметической прогрессии.</p>
      * <p>Сумма членов арифметической прогрессии: </p>
-     *      <pre>   S=(a<sub>1</sub>+a<sub>n</sub>)*n/2 [1] </pre>
+     * <pre>   S=(a<sub>1</sub>+a<sub>n</sub>)*n/2 [1] </pre>
      * Любой (n-й) член прогрессии может быть вычислен по формуле общего члена:
-     *      <pre>   a<sub>n</sub>=a<sub>1</sub>+(n-1)*d, [2]</pre>
+     * <pre>   a<sub>n</sub>=a<sub>1</sub>+(n-1)*d, [2]</pre>
      * где
-     *      <pre>   d=(a<sub>n</sub>-a<sub>1</sub>)/(n-1) [3]</pre>
+     * <pre>   d=(a<sub>n</sub>-a<sub>1</sub>)/(n-1) [3]</pre>
      * <p>В формуле [1] an заменим на равное ему [2] и получим формулу определения суммы в зависимости от первого члена,
      * разности и количества членов заданной прогрессии:
-     *      <pre>   S=(2a<sub>1</sub>+(n-1)*d)*n/2 [4]</pre></p>
+     * <pre>   S=(2a<sub>1</sub>+(n-1)*d)*n/2 [4]</pre></p>
+     *
      * @param array
      * @return
      */
-    public static char findMissingLetterArithmetic(char[] array){
-        int n = array.length;
-        int d = (array[n-1]-array[0])/(n-1);
-        int sFull = ((2*array[0]+d*(n))*(n+1))/2; // полная сумма членов арифметической прогрессии
-        int sArray=0; //сумма элементов в array
-        for (char c: array){
-            sArray+=c;
+    public static char findMissingLetterArithmetic(char[] array) {
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        int sArray = 0; //сумма элементов в array
+        for (char c : array) {
+            sArray += c;
+            if (min > c)
+                min = c;
+            if (max < c)
+                max = c;
         }
-        return (char) (sFull-sArray);
+        int n = array.length;
+        int d = (max - min) / (n - 1);                      // [3]
+        int sFull = ((2 * min + d * (n)) * (n + 1)) / 2;    // [4] полная сумма членов арифметической прогрессии
+        return (char) (sFull - sArray);
     }
 
     /**
