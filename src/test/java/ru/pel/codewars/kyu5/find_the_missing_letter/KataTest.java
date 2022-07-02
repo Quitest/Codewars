@@ -26,4 +26,10 @@ class KataTest {
         assertEquals('e', Kata.findMissingLetterXOR(new char[]{'a', 'b', 'c', 'd', 'f'}));
         assertEquals('P', Kata.findMissingLetterXOR(new char[]{'O', 'Q', 'R', 'S'}));
     }
+
+    @Test
+    void findMissingLetterArithmetic() {
+        assertEquals('e', Kata.findMissingLetterArithmetic(new char[]{'a', 'b', 'c', 'd', 'f'}));
+        assertEquals('P', Kata.findMissingLetterArithmetic(new char[]{'O', 'Q', 'R', 'S'}));
+    }
 }
