@@ -31,24 +31,27 @@ public class Kata {
 
     /**
      * <p>Поиск пропущенной буквы через сумму членов арифметической прогрессии.</p>
-     * <p>Сумма членов арифметической прогрессии: S = (a<sub>1</sub> + a<sub>n</sub>) * n / 2 [1]</p>
-     * <p>Любой (n — й) член прогрессии может быть вычислен по формуле общего члена: a<sub>n</sub> = a<sub>1</sub> + (n - 1) * d, [2]</p>
-     * где d = (a<sub>n</sub> - a<sub>1</sub>) / (n-1).
+     * <p>Сумма членов арифметической прогрессии: </p>
+     *      <pre>   S=(a<sub>1</sub>+a<sub>n</sub>)*n/2 [1] </pre>
+     * Любой (n-й) член прогрессии может быть вычислен по формуле общего члена:
+     *      <pre>   a<sub>n</sub>=a<sub>1</sub>+(n-1)*d, [2]</pre>
+     * где
+     *      <pre>   d=(a<sub>n</sub>-a<sub>1</sub>)/(n-1) [3]</pre>
      * <p>В формуле [1] an заменим на равное ему [2] и получим формулу определения суммы в зависимости от первого члена,
      * разности и количества членов заданной прогрессии:
-     * S = (2 a<sub>1</sub> + (n - 1) * d) * n / 2 [3]</p>
+     *      <pre>   S=(2a<sub>1</sub>+(n-1)*d)*n/2 [4]</pre></p>
      * @param array
      * @return
      */
     public static char findMissingLetterArithmetic(char[] array){
         int n = array.length;
         int d = (array[n-1]-array[0])/(n-1);
-        int sumAll = ((2*array[0]+d*(n))*(n+1))/2;
-        int sumArray=0;
+        int sFull = ((2*array[0]+d*(n))*(n+1))/2; // полная сумма членов арифметической прогрессии
+        int sArray=0; //сумма элементов в array
         for (char c: array){
-            sumArray+=c;
+            sArray+=c;
         }
-        return (char) (sumAll-sumArray);
+        return (char) (sFull-sArray);
     }
 
     /**

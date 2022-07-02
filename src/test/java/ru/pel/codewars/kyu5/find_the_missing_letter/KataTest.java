@@ -32,4 +32,10 @@ class KataTest {
         assertEquals('e', Kata.findMissingLetterArithmetic(new char[]{'a', 'b', 'c', 'd', 'f'}));
         assertEquals('P', Kata.findMissingLetterArithmetic(new char[]{'O', 'Q', 'R', 'S'}));
     }
+
+    @Test
+    void findMissingLetterInUnSortedArrayArithmetic() {
+        assertEquals('e', Kata.findMissingLetterArithmetic(new char[]{'d', 'f', 'c', 'a', 'b'}));
+        assertEquals('P', Kata.findMissingLetterArithmetic(new char[]{'R', 'S', 'O', 'Q'}));
+    }
 }
